@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Buzzword Translator</title>
+    <meta name="description" content="Translate corporate jargon and buzzwords into plain English">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <main class="app" id="main-content">
+        <header class="header">
+            <h1 class="title">Corporate Buzzword Translator</h1>
+            <p class="subtitle">Decode the corporate speak</p>
+        </header>
+
+        <section class="search-section" aria-label="Search for buzzwords">
+            <div class="search-container">
+                <label for="searchInput" class="visually-hidden">Search for corporate buzzwords</label>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="Enter a buzzword or phrase..."
+                    autocomplete="off"
+                    spellcheck="false"
+                    aria-describedby="search-instructions"
+                    role="searchbox"
+                    aria-expanded="false"
+                    aria-haspopup="listbox"
+                >
+                <button type="button" class="clear-button" id="clearButton" aria-label="Clear search input">
+                    <span class="clear-icon" aria-hidden="true">×</span>
+                </button>
+            </div>
+            
+            <div class="search-actions">
+                <button type="button" class="random-button" id="randomButton" aria-label="Get random buzzword">
+                    <span class="random-icon" aria-hidden="true">🎲</span>
+                    <span class="random-text">Surprise me</span>
+                </button>
+            </div>
+            
+            <div id="search-instructions" class="visually-hidden">
+                Type to search for corporate buzzwords and get their plain English translations. Use arrow keys to navigate results.
+            </div>
+            
+            <div class="examples-container" id="examplesContainer">
+                <p class="examples-label" id="examples-label">Try these examples:</p>
+                <div class="examples-chips" id="examplesChips" role="group" aria-labelledby="examples-label">
+                    <!-- Example chips will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="results-section" id="resultsSection" aria-label="Search results">
+            <div class="results-container" id="resultsContainer" role="listbox" aria-live="polite" aria-label="Buzzword translations">
+                <!-- Search results will be populated by JavaScript -->
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;" role="status" aria-live="polite">
+                <h3>Hmm, that doesn't ring a bell...</h3>
+                <p>Try searching for terms like "synergy", "pivot", or "low hanging fruit"</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="buzzwords.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
