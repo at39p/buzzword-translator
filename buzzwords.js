@@ -429,10 +429,18 @@ const buzzwords = [
     category: "productivity",
     alternatives: ["quick wins", "easy pickings"],
     context: "Often used to describe tasks that require minimal effort for maximum impact"
-  },
-  // M-O
-  {
-    phrase: "mindshare",
+   },
+   {
+     phrase: "must win battle",
+     translation: "critical initiative that cannot be allowed to fail",
+     keywords: ["must", "win", "battle", "critical", "essential", "priority"],
+     category: "strategy",
+     alternatives: ["critical initiative", "high-stakes priority"],
+     context: "A strategic effort so important that failure would have severe consequences"
+   },
+   // M-O
+   {
+     phrase: "mindshare",
     translation: "how much people think about your brand",
     keywords: ["mindshare", "awareness", "attention", "brand"],
     category: "marketing",
